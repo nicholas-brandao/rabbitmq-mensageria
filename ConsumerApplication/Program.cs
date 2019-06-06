@@ -74,7 +74,8 @@ namespace ConsumerApplication
 
                 try
                 {
-                    StreamWriter arquivo = new StreamWriter($"{Directory.GetCurrentDirectory()}\\ArquivosJson\\{nomeArquivo}");
+                    var caminhoArquivo = Directory.GetCurrentDirectory();
+                    StreamWriter arquivo = new StreamWriter($"{caminhoArquivo}\\ArquivosJson\\{nomeArquivo}");
 
                     arquivo.WriteLine(corpoMsg);
                     arquivo.Close();
